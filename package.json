@@ -1,0 +1,13 @@
+{
+  "name": "app-cantina-unir",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cardápio digital demonstrativo para cantina escolar",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
