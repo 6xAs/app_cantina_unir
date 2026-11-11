@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#183a2b">
+<title>Entrar | Cantina UNIR</title>
+<meta name="description" content="Acesse sua conta da Cantina UNIR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{font-family:'DM Sans',Arial,sans-serif;color:#26342b;background:#f9f8f4;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100vh}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #d6b360;outline-offset:3px}
+.layout{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(450px,1fr)}
+.visual{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:42px clamp(30px,6vw,90px);background:#183a2b;color:#fff;overflow:hidden}
+.visual:before{content:'';position:absolute;width:650px;height:650px;border:1px solid #ffffff16;border-radius:50%;right:-300px;top:14%}.visual:after{content:'';position:absolute;width:400px;height:400px;border:1px solid #ffffff18;border-radius:50%;right:-150px;top:28%}
+.brand{display:flex;align-items:center;gap:12px;font:800 23px Outfit,sans-serif;position:relative;z-index:1}.brand-symbol{display:grid;place-items:center;width:45px;height:45px;border-radius:14px;background:#e9bd60;color:#183a2b;font-size:24px}.brand small{display:block;font:500 12px 'DM Sans',sans-serif;color:#c7d9cd;margin-top:2px}
+.visual-main{position:relative;z-index:1;max-width:530px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#e9bd60}.visual h1{font:800 clamp(42px,5.2vw,74px)/1.06 Outfit,sans-serif;letter-spacing:-1.7px;margin:16px 0 22px}.visual h1 em{font-style:normal;color:#e9bd60}.visual p{max-width:410px;color:#d1dfd5;line-height:1.8;font-size:15px}
+.food-art{position:relative;display:flex;align-items:center;justify-content:center;width:230px;height:230px;margin:28px 0;background:#ffffff0d;border:1px solid #ffffff21;border-radius:50%;font-size:120px;filter:drop-shadow(0 20px 12px #0003)}.food-art:before{content:'☕';position:absolute;font-size:65px;right:-38px;bottom:-8px;transform:rotate(12deg)}.visual-bottom{position:relative;z-index:1;display:flex;justify-content:space-between;gap:15px;color:#b4cabb;font-size:12px}
+.panel{display:flex;align-items:center;justify-content:center;padding:42px 30px}.form-area{width:min(100%,430px)}.back{display:inline-flex;gap:9px;align-items:center;color:#56816a;font-weight:700;font-size:13px;margin-bottom:55px}.back:hover{color:#173d2a}.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid #e4eadd;background:#f1f6ec;color:#497358;padding:9px 12px;border-radius:30px;font-size:12px;font-weight:700}.chip-dot{width:7px;height:7px;background:#78a980;border-radius:50%}.form-area h2{font:800 clamp(32px,3.6vw,43px)/1.1 Outfit,sans-serif;letter-spacing:-1.1px;margin:20px 0 10px}.subtitle{font-size:14px;color:#839087;line-height:1.6;margin:0 0 35px}.field-label{display:block;font-size:13px;font-weight:800;margin-bottom:10px}.field-wrap{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e0e6df;border-radius:14px;padding:0 15px;transition:border-color .2s,box-shadow .2s}.field-wrap:focus-within{border-color:#498363;box-shadow:0 0 0 3px #49836318}.field-icon{color:#8ba095;font-size:19px}.field-wrap input{width:100%;height:54px;border:0;outline:0;background:transparent;color:#253d2d;font-size:14px;min-width:0}.field-wrap input::placeholder{color:#a0aaa2}.field-wrap button{border:0;background:transparent;padding:8px 0;color:#52745d;font-size:12px;font-weight:800}.field-group{margin-bottom:22px}.help-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:5px 0 24px}.help-row label{font-size:12px;color:#627168;display:flex;align-items:center;gap:8px}.help-row input{accent-color:#23573b;width:16px;height:16px}.forgot{font-size:12px;font-weight:800;color:#3e7753}.primary{width:100%;height:54px;border:0;background:#183a2b;color:#fff;font-weight:800;border-radius:14px;box-shadow:0 8px 18px #183a2b1d}.primary:hover{background:#245038}.primary:disabled{opacity:.6;cursor:wait}.feedback{margin:16px 0 0;padding:13px 15px;border-radius:12px;background:#fff4dc;border:1px solid #f1dfa6;color:#765a27;font-size:12px;line-height:1.6}.feedback[hidden]{display:none}.notice{display:flex;gap:11px;padding:15px;margin-top:28px;background:#f0f2ed;border:1px solid #e4eae1;border-radius:13px;font-size:12px;color:#66786a;line-height:1.7}.notice strong{color:#2d5a3f}.bottom-link{margin-top:35px;text-align:center;font-size:13px;color:#7b887e}.bottom-link a{font-weight:800;color:#246044}.mobile-brand{display:none}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.visual{display:none}.panel{min-height:100vh;padding:30px 23px}.mobile-brand{display:flex;align-items:center;gap:9px;color:#183a2b;font:800 20px Outfit;margin-bottom:42px}.mobile-brand .brand-symbol{height:37px;width:37px;font-size:19px}.back{margin-bottom:33px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="layout">
+<section class="visual" aria-label="Boas-vindas à Cantina UNIR">
+<a class="brand" href="/"><span class="brand-symbol" aria-hidden="true">✦</span><span>Cantina UNIR<small>Seu cardápio digital</small></span></a>
+<div class="visual-main"><div class="eyebrow">Seu intervalo, do seu jeito</div><h1>O melhor da pausa começa <em>aqui.</em></h1><p>Seus lanches favoritos, uma experiência mais prática e tudo pronto para facilitar seu dia na universidade.</p><div class="food-art" aria-hidden="true">🥪</div></div>
+<div class="visual-bottom"><span>✦ Sabor para cada intervalo</span><span>Cantina UNIR · 2026</span></div>
+</section>
+<main class="panel"><div class="form-area">
+<a href="/" class="mobile-brand"><span class="brand-symbol" aria-hidden="true">✦</span>Cantina UNIR</a>
+<a class="back" href="/">← Voltar ao cardápio</a>
+<div><span class="chip"><span class="chip-dot"></span> Espaço do cliente</span></div>
+<h2>Bem-vindo de volta!</h2>
+<p class="subtitle">Acesse sua conta para acompanhar suas experiências na cantina.</p>
+<form id="loginForm" novalidate>
+<div class="field-group"><label class="field-label" for="email">E-mail</label><div class="field-wrap"><span class="field-icon" aria-hidden="true">✉</span><input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="username" inputmode="email" maxlength="254" required></div></div>
+<div class="field-group"><label class="field-label" for="password">Senha</label><div class="field-wrap"><span class="field-icon" aria-hidden="true">🔒</span><input type="password" id="password" name="password" placeholder="Digite sua senha" autocomplete="current-password" required minlength="6"><button type="button" id="togglePassword" aria-label="Mostrar senha" aria-pressed="false">Mostrar</button></div></div>
+<div class="help-row"><label><input type="checkbox" id="remember"> Manter e-mail preenchido</label><a class="forgot" href="#" id="forgot">Esqueceu a senha?</a></div>
+<button class="primary" type="submit">Entrar na minha conta →</button>
+<p id="feedback" role="status" aria-live="polite" class="feedback" hidden></p>
+</form>
+<div class="notice"><span aria-hidden="true">ⓘ</span><span><strong>Ambiente em preparação.</strong> A autenticação de contas será habilitada quando o projeto Supabase da Cantina UNIR estiver configurado. Nenhuma senha é enviada ou armazenada nesta versão.</span></div>
+<p class="bottom-link">Quer ver o que temos hoje? <a href="/">Explorar o cardápio →</a></p>
+</div></main></div>
+<script>
+(function(){
+'use strict';
+const form=document.getElementById('loginForm'),email=document.getElementById('email'),password=document.getElementById('password'),feedback=document.getElementById('feedback'),toggle=document.getElementById('togglePassword');
+function message(text){feedback.textContent=text;feedback.hidden=false}
+toggle.addEventListener('click',function(){const visible=password.type==='text';password.type=visible?'password':'text';toggle.textContent=visible?'Mostrar':'Ocultar';toggle.setAttribute('aria-label',visible?'Mostrar senha':'Ocultar senha');toggle.setAttribute('aria-pressed',String(!visible))});
+document.getElementById('forgot').addEventListener('click',function(e){e.preventDefault();message('A recuperação de senha estará disponível após a integração com o Supabase Auth.')});
+form.addEventListener('submit',function(e){e.preventDefault();const mail=email.value.trim();if(!mail||!email.validity.valid){message('Informe um e-mail válido para continuar.');email.focus();return}if(!password.value||password.value.length<6){message('Informe sua senha (mínimo de 6 caracteres).');password.focus();return}message('A tela de login está pronta. A autenticação real ainda depende da configuração do Supabase Auth; nenhuma credencial foi enviada.');password.value=''});
+})();
+</script>
+</body></html>
